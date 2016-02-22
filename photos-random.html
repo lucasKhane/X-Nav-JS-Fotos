@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Mostrador de fotos aleatorias</title>
+     <script type="text/javascript" charset="utf-8">
+        function foto(){
+          imagen = document.getElementById("imagen");
+          var links = [
+            'http://www.rugbydecalle.com/wp-content/uploads/Rugby-Championships-Big-Hit.jpg',
+            'http://shamrockrugbyclub.com/wp-content/uploads/2014/07/url2.jpg',
+            'http://www.deportes.info/wp-content/uploads/rugby.jpg'
+          ];
+          link = links[Math.floor(Math.random() * links.length)];
+          imagen.innerHTML = '<img src="'+link+'">';
+        }
+     </script>
+    </head>
+    <body>
+     <p>Algunas fotos<a href="javascript:foto()">Cliquea aqui para ver mas</a></p>
+     <span id="imagen"></span>
+   </body>
+</html>
